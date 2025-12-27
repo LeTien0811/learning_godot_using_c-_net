@@ -1,5 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://cvbqpuh7ry81r"]
+[gd_scene load_steps=9 format=3 uid="uid://cvbqpuh7ry81r"]
 
+[ext_resource type="Script" path="res://script/Player1.cs" id="1_04l8u"]
 [ext_resource type="Texture2D" uid="uid://bvxis4p3ula08" path="res://assets/cat-removebg-preview.png" id="1_rfmnd"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gneq0"]
@@ -42,13 +43,17 @@ animations = [{
 radius = 12.0
 
 [node name="Player1" type="CharacterBody2D"]
+z_index = 5
+script = ExtResource("1_04l8u")
+metadata/_edit_vertical_guides_ = [19.0]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-1, -38)
 sprite_frames = SubResource("SpriteFrames_f2c3w")
 animation = &"idle"
-frame_progress = 0.9684589
+autoplay = "idle"
+frame_progress = 0.687495
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -13)
+position = Vector2(0, -15)
 shape = SubResource("CircleShape2D_jkihx")
